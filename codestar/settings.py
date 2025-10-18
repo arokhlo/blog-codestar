@@ -56,8 +56,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'codestar.wsgi.application'
 
 # Database - Use SQLite for local development
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
+}
+
+
+
 # Password validation
 CSRF_TRUSTED_ORIGINS = [
     'https://*.codeinstitute.com',
