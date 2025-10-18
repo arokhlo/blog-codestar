@@ -1,12 +1,14 @@
 import os
 from pathlib import Path
 
+SECRET_KEY = os.environ.get("SECRET_KEY")
+DEBUG = os.environ.get("DEBUG") == "True"
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+
 # Define BASE_DIR first!
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-temporary-key-for-development-123456'
-
-DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1', 
