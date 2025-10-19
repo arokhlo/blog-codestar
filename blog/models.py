@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+# removed accidental self-imports that caused a circular import
 STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
