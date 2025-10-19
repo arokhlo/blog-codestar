@@ -21,8 +21,12 @@ from django.conf.urls.static import static
     
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('summernote/', include('django_summernote.urls')),  # summernote urls
     path('', include('blog.urls'), name='blog'), # the app urls are loaded as the main urls
+=======
+    path('', include('blog.urls'), name='blog-urls'), # the app urls are loaded as the main urls
+>>>>>>> b7e8454d0aee8236baaaec6d9719f7cfd2bb29c4
 ]
 
 # Serve media files in development
